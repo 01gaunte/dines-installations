@@ -1,0 +1,723 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Dines Installations &mdash; Solar PV, EV &amp; Electrical | Halifax</title>
+<meta name="description" content="Family-run solar, battery, EV charger & electrical contractor based in Halifax — quietly excellent work, since 2014." />
+<link rel="preconnect" href="https://images.pexels.com" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: {
+          serif: ['Fraunces', 'Georgia', 'serif'],
+          sans: ['Inter', 'system-ui', 'sans-serif'],
+        },
+        colors: {
+          paper: { DEFAULT: '#f6f1e8', deep: '#ede5d4' },
+          ink:   { DEFAULT: '#0c1f2c', soft: '#243748', mute: '#5b6b78' },
+          rust:  { DEFAULT: '#c44214', deep: '#9b2c0f' },
+          sky:   { DEFAULT: '#7aa9c9' },
+        },
+      },
+    },
+  };
+</script>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-paper text-ink font-sans antialiased overflow-x-hidden">
+
+<!-- ============================================================
+     A/B SWITCHER
+     ============================================================ -->
+<a href="../" class="ab-switch fixed top-4 right-4 z-50 bg-ink text-paper text-[10px] uppercase tracking-[0.25em] font-medium px-4 py-2.5 rounded-full hover:bg-rust transition shadow-lg">
+  &larr; Design&nbsp;A
+</a>
+
+<!-- ============================================================
+     NAV
+     ============================================================ -->
+<header class="fixed top-0 inset-x-0 z-40 bg-paper/85 backdrop-blur-md border-b border-ink/8">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+    <a href="#home" data-tab="home" data-no-highlight class="tab-link flex items-center group">
+      <img src="../assets/logo.png" alt="Dines Installations" class="h-9 sm:h-10 w-auto" />
+    </a>
+
+    <nav class="hidden md:flex items-center gap-9">
+      <button data-tab="home"     class="tab-link nav-item text-sm tracking-wide">Home</button>
+      <button data-tab="about"    class="tab-link nav-item text-sm tracking-wide">About</button>
+      <button data-tab="services" class="tab-link nav-item text-sm tracking-wide">Services</button>
+      <button data-tab="contact"  class="tab-link nav-item text-sm tracking-wide">Contact</button>
+    </nav>
+
+    <a href="tel:01422204249" class="hidden md:inline-flex items-center gap-2 border border-ink/20 hover:border-ink hover:bg-ink hover:text-paper transition px-5 py-2.5 rounded-full text-sm font-medium">
+      <svg viewBox="0 0 24 24" fill="currentColor" class="h-3.5 w-3.5"><path d="M2.003 5.884 5.5 4l4 6-3 2a11 11 0 0 0 5.5 5.5l2-3 6 4-1.884 3.497a2 2 0 0 1-2.227.96A19 19 0 0 1 1.043 8.11a2 2 0 0 1 .96-2.227Z"/></svg>
+      01422 204249
+    </a>
+
+    <button id="navToggle" class="md:hidden p-2 -mr-2" aria-label="menu">
+      <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6"><path stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+
+  <div id="mobileNav" class="md:hidden hidden border-t border-ink/8 bg-paper">
+    <div class="px-6 py-4 flex flex-col">
+      <button data-tab="home"     class="tab-link text-left py-3 border-b border-ink/8">Home</button>
+      <button data-tab="about"    class="tab-link text-left py-3 border-b border-ink/8">About</button>
+      <button data-tab="services" class="tab-link text-left py-3 border-b border-ink/8">Services</button>
+      <button data-tab="contact"  class="tab-link text-left py-3">Contact</button>
+      <a href="tel:01422204249" class="mt-4 text-center bg-ink text-paper px-5 py-3 rounded-full text-sm font-medium">01422 204249</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============================================================
+     HOME TAB
+     ============================================================ -->
+<main id="tab-home" class="tab-panel pt-20">
+
+  <!-- ============== EDITORIAL HERO ============== -->
+  <section class="relative pt-12 lg:pt-20 pb-24 overflow-hidden">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+
+      <!-- masthead/eyebrow -->
+      <div class="flex items-center justify-between border-b border-ink/15 pb-4 mb-12 text-[11px] uppercase tracking-[0.3em] text-ink-mute">
+        <div>Volume I &middot; Solar &middot; Electrical &middot; West Yorkshire</div>
+        <div class="hidden sm:block">Established 2014</div>
+      </div>
+
+      <div class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-end">
+        <div class="lg:col-span-7">
+          <p class="text-rust text-xs uppercase tracking-[0.3em] font-medium mb-6 reveal">A field guide to home solar</p>
+          <h1 class="font-serif text-[14vw] sm:text-[10vw] lg:text-[7.5rem] xl:text-[8.5rem] leading-[0.92] tracking-[-0.03em] font-light reveal" style="--reveal-delay:.1s">
+            Sunlight,<br/>
+            <em class="italic font-normal text-rust">harvested</em><br/>
+            from your roof.
+          </h1>
+          <p class="mt-10 text-lg lg:text-xl text-ink-soft max-w-xl leading-relaxed reveal" style="--reveal-delay:.2s">
+            Quietly excellent solar, battery, EV charging and electrical work, by a small family firm in Halifax.
+          </p>
+          <div class="mt-9 flex flex-wrap items-center gap-5 reveal" style="--reveal-delay:.3s">
+            <button data-tab="contact" class="tab-link group inline-flex items-center gap-3 bg-ink hover:bg-rust transition text-paper px-7 py-4 rounded-full text-sm tracking-wide">
+              Request a survey
+              <svg viewBox="0 0 24 24" fill="currentColor" class="h-3.5 w-3.5 transition group-hover:translate-x-1"><path d="M13.5 4.5 21 12l-7.5 7.5-1.06-1.06 5.69-5.69H3v-1.5h15.13l-5.69-5.69 1.06-1.06Z"/></svg>
+            </button>
+            <button data-tab="services" class="tab-link inline-flex items-center gap-2 text-sm tracking-wide border-b border-ink/30 hover:border-rust hover:text-rust transition pb-1">
+              Read about our services
+            </button>
+          </div>
+        </div>
+
+        <!-- Editorial hero photograph -->
+        <div class="lg:col-span-5 relative">
+          <figure class="reveal" style="--reveal-delay:.15s">
+            <div class="relative h-[480px] lg:h-[580px] overflow-hidden rounded-sm">
+              <img data-zoom="0.08" src="https://images.pexels.com/photos/9875411/pexels-photo-9875411.jpeg?auto=compress&cs=tinysrgb&w=1200" class="absolute inset-0 w-full h-full object-cover will-change-transform" alt="" />
+            </div>
+            <figcaption class="mt-3 text-xs text-ink-mute italic font-serif">Plate I &middot; Roof-mounted PV array, Halifax HX3.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== EDITORIAL "DECK" / DROP CAP INTRO ============== -->
+  <section class="relative py-24 border-y border-ink/10 bg-paper-deep">
+    <div class="max-w-3xl mx-auto px-6">
+      <p class="reveal text-rust text-xs uppercase tracking-[0.3em] font-medium text-center mb-8">An introduction</p>
+      <p class="reveal font-serif text-2xl md:text-3xl leading-[1.4] tracking-[-0.01em] text-ink-soft" style="--reveal-delay:.1s">
+        <span class="float-left mr-3 mt-1 font-serif text-7xl md:text-8xl leading-none text-ink">D</span>ines Installations is a small family firm of qualified electricians who, for the last decade, have been quietly fitting solar PV, batteries, EV chargers and the rest of the wiring it takes to run a modern home &mdash; across Halifax and the wider West Yorkshire valleys.
+      </p>
+      <p class="reveal font-serif text-xl md:text-2xl leading-[1.5] tracking-[-0.01em] text-ink-soft mt-7" style="--reveal-delay:.2s">
+        We don't subcontract. We turn up when we say we will. We tidy up after ourselves. And we don't sell you anything you don't need.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============== NUMBERED FEATURE LIST ============== -->
+  <section class="relative py-28">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+      <div class="grid lg:grid-cols-12 gap-10 mb-16">
+        <div class="lg:col-span-4">
+          <p class="text-rust text-xs uppercase tracking-[0.3em] font-medium reveal">No. I</p>
+          <h2 class="font-serif text-5xl md:text-6xl leading-[0.95] tracking-[-0.02em] mt-3 reveal" style="--reveal-delay:.1s">Why solar.</h2>
+        </div>
+        <div class="lg:col-span-8 lg:col-start-6 max-w-2xl">
+          <p class="reveal text-lg text-ink-soft leading-relaxed" style="--reveal-delay:.2s">
+            Three reasons people on our books in Halifax fitted solar last year. None of them were the climate &mdash; though that&rsquo;s a fine reason too.
+          </p>
+        </div>
+      </div>
+
+      <ol class="border-t border-ink/15">
+        <li class="reveal grid lg:grid-cols-12 gap-10 py-10 border-b border-ink/15 group">
+          <div class="lg:col-span-1 font-serif text-3xl text-rust">01</div>
+          <div class="lg:col-span-4">
+            <h3 class="font-serif text-2xl md:text-3xl tracking-[-0.01em]">Lower bills, fixed for 25 years.</h3>
+          </div>
+          <div class="lg:col-span-7 text-ink-mute leading-relaxed">
+            <p>An average 4 kW system in Halifax saves around £900&ndash;£1,200 a year on electricity. Add a battery and that figure climbs further. Once installed, your sunlight is free until 2050.</p>
+          </div>
+        </li>
+        <li class="reveal grid lg:grid-cols-12 gap-10 py-10 border-b border-ink/15 group" style="--reveal-delay:.1s">
+          <div class="lg:col-span-1 font-serif text-3xl text-rust">02</div>
+          <div class="lg:col-span-4">
+            <h3 class="font-serif text-2xl md:text-3xl tracking-[-0.01em]">Independence from the grid.</h3>
+          </div>
+          <div class="lg:col-span-7 text-ink-mute leading-relaxed">
+            <p>Energy prices doubled in three years. Generating your own electricity is the only way to step out of that game permanently. With a battery, you can sail through power cuts.</p>
+          </div>
+        </li>
+        <li class="reveal grid lg:grid-cols-12 gap-10 py-10 border-b border-ink/15 group" style="--reveal-delay:.2s">
+          <div class="lg:col-span-1 font-serif text-3xl text-rust">03</div>
+          <div class="lg:col-span-4">
+            <h3 class="font-serif text-2xl md:text-3xl tracking-[-0.01em]">Free fuel for your car.</h3>
+          </div>
+          <div class="lg:col-span-7 text-ink-mute leading-relaxed">
+            <p>Pair solar with a diverter-capable EV charger and your car charges from sunlight. The combination pays back faster than either system alone.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============== PINNED IMAGE WITH KEN-BURNS ZOOM ============== -->
+  <section id="pinSection" class="relative h-[180vh]">
+    <div class="sticky top-0 h-screen overflow-hidden">
+      <div class="absolute inset-0">
+        <img data-zoom="0.18" src="https://images.pexels.com/photos/35726122/pexels-photo-35726122.jpeg?auto=compress&cs=tinysrgb&w=1920" class="h-full w-full object-cover will-change-transform" alt="" />
+        <div class="absolute inset-0 bg-ink/55"></div>
+      </div>
+      <div class="relative h-full flex items-center">
+        <div class="max-w-[1400px] mx-auto px-6 lg:px-12 w-full">
+          <blockquote class="max-w-3xl text-paper">
+            <p class="reveal font-serif text-3xl md:text-5xl lg:text-6xl leading-[1.1] tracking-[-0.02em] font-light italic">
+              &ldquo;Tidy job, no fuss, came back to commission the battery without me even asking.&rdquo;
+            </p>
+            <footer class="reveal mt-7 flex items-center gap-3" style="--reveal-delay:.15s">
+              <div class="h-px w-10 bg-paper/60"></div>
+              <span class="text-sm uppercase tracking-[0.25em] text-paper/80">Mark T. &middot; Halifax</span>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== HORIZONTAL FILMSTRIP ============== -->
+  <section class="relative py-24 overflow-hidden">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-12 mb-12">
+      <div class="flex items-end justify-between border-b border-ink/15 pb-4">
+        <p class="text-rust text-xs uppercase tracking-[0.3em] font-medium">No. II &middot; A portfolio</p>
+        <p class="hidden sm:block text-xs uppercase tracking-[0.3em] text-ink-mute">Recent commissions</p>
+      </div>
+    </div>
+
+    <div id="filmStrip" class="flex gap-6 lg:gap-8 px-6 lg:px-12 will-change-transform">
+      <figure class="shrink-0 w-[78vw] sm:w-[58vw] lg:w-[36vw]">
+        <div class="aspect-[4/5] overflow-hidden">
+          <img src="https://images.pexels.com/photos/9875448/pexels-photo-9875448.jpeg?auto=compress&cs=tinysrgb&w=1000" class="w-full h-full object-cover hover:scale-105 transition duration-1000" alt="" />
+        </div>
+        <figcaption class="mt-3 font-serif italic text-sm text-ink-mute">Plate II &middot; 8.2 kW residential, Halifax, 2025.</figcaption>
+      </figure>
+      <figure class="shrink-0 w-[78vw] sm:w-[58vw] lg:w-[36vw]">
+        <div class="aspect-[4/5] overflow-hidden">
+          <img src="https://images.pexels.com/photos/9875411/pexels-photo-9875411.jpeg?auto=compress&cs=tinysrgb&w=1000" class="w-full h-full object-cover hover:scale-105 transition duration-1000" alt="" />
+        </div>
+        <figcaption class="mt-3 font-serif italic text-sm text-ink-mute">Plate III &middot; Commercial rooftop, Sowerby, 2025.</figcaption>
+      </figure>
+      <figure class="shrink-0 w-[78vw] sm:w-[58vw] lg:w-[36vw]">
+        <div class="aspect-[4/5] overflow-hidden">
+          <img src="https://images.pexels.com/photos/8853504/pexels-photo-8853504.jpeg?auto=compress&cs=tinysrgb&w=1000" class="w-full h-full object-cover hover:scale-105 transition duration-1000" alt="" />
+        </div>
+        <figcaption class="mt-3 font-serif italic text-sm text-ink-mute">Plate IV &middot; EV charger &amp; solar diverter, Bradford.</figcaption>
+      </figure>
+      <figure class="shrink-0 w-[78vw] sm:w-[58vw] lg:w-[36vw]">
+        <div class="aspect-[4/5] overflow-hidden">
+          <img src="https://images.pexels.com/photos/17854880/pexels-photo-17854880.jpeg?auto=compress&cs=tinysrgb&w=1000" class="w-full h-full object-cover hover:scale-105 transition duration-1000" alt="" />
+        </div>
+        <figcaption class="mt-3 font-serif italic text-sm text-ink-mute">Plate V &middot; In-roof PV, Huddersfield (heritage).</figcaption>
+      </figure>
+      <figure class="shrink-0 w-[78vw] sm:w-[58vw] lg:w-[36vw]">
+        <div class="aspect-[4/5] overflow-hidden">
+          <img src="https://images.pexels.com/photos/12224996/pexels-photo-12224996.jpeg?auto=compress&cs=tinysrgb&w=1000" class="w-full h-full object-cover hover:scale-105 transition duration-1000" alt="" />
+        </div>
+        <figcaption class="mt-3 font-serif italic text-sm text-ink-mute">Plate VI &middot; Off-grid annexe with hybrid inverter.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============== CLOSING CTA ============== -->
+  <section class="relative py-32 border-t border-ink/10">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <p class="text-rust text-xs uppercase tracking-[0.3em] font-medium reveal">A simple ask</p>
+      <h2 class="font-serif text-5xl md:text-7xl leading-[0.95] tracking-[-0.02em] mt-5 reveal" style="--reveal-delay:.1s">
+        Let us<br/><em class="italic">come and have a look.</em>
+      </h2>
+      <p class="text-ink-mute mt-7 reveal" style="--reveal-delay:.2s">Free site survey. No pressure. We'll tell you honestly if solar is right for your roof.</p>
+      <div class="mt-9 flex flex-wrap items-center justify-center gap-5 reveal" style="--reveal-delay:.3s">
+        <button data-tab="contact" class="tab-link bg-ink hover:bg-rust transition text-paper px-7 py-4 rounded-full text-sm tracking-wide">Book a survey</button>
+        <a href="tel:01422204249" class="text-sm tracking-wide border-b border-ink/30 hover:border-rust hover:text-rust transition pb-1">or call 01422 204249</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================
+     ABOUT TAB
+     ============================================================ -->
+<main id="tab-about" class="tab-panel hidden pt-20">
+
+  <section class="relative pt-16 pb-24">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+
+      <div class="border-b border-ink/15 pb-4 mb-16 text-[11px] uppercase tracking-[0.3em] text-ink-mute reveal">
+        Volume I &middot; About the firm
+      </div>
+
+      <div class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-end">
+        <div class="lg:col-span-7">
+          <p class="text-rust text-xs uppercase tracking-[0.3em] font-medium reveal mb-6">Profile</p>
+          <h1 class="reveal font-serif text-[14vw] sm:text-[10vw] lg:text-[7.5rem] xl:text-[8.5rem] leading-[0.92] tracking-[-0.03em] font-light" style="--reveal-delay:.1s">
+            Local sparks,<br/>
+            <em class="italic font-normal text-rust">renewable focus.</em>
+          </h1>
+          <p class="reveal mt-10 text-lg text-ink-soft max-w-xl leading-relaxed" style="--reveal-delay:.2s">
+            Founded in 2014, Dines Installations is a small family-run electrical contractor with a particular focus on solar, batteries and EV charging.
+          </p>
+          <p class="reveal mt-5 text-ink-mute max-w-xl leading-relaxed" style="--reveal-delay:.25s">
+            We are deliberately small. Two qualified electricians, no salespeople, no call centre. The person who quotes the job is the person who installs it &mdash; and the person you call ten years later when you want to add a battery.
+          </p>
+        </div>
+
+        <div class="lg:col-span-5">
+          <figure class="reveal" style="--reveal-delay:.15s">
+            <div class="relative h-[580px] overflow-hidden rounded-sm">
+              <img data-zoom="0.1" src="https://images.pexels.com/photos/27928762/pexels-photo-27928762.jpeg?auto=compress&cs=tinysrgb&w=1200" class="absolute inset-0 w-full h-full object-cover will-change-transform" alt="" />
+            </div>
+            <figcaption class="mt-3 text-xs text-ink-mute italic font-serif">A working day, somewhere in West Yorkshire.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BIG NUMBERS -->
+  <section class="relative py-20 border-y border-ink/10 bg-paper-deep">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-6">
+        <div class="reveal">
+          <div class="font-serif text-6xl md:text-7xl leading-none tracking-[-0.02em] counter" data-target="500">0</div>
+          <div class="text-xs uppercase tracking-[0.2em] text-ink-mute mt-3">Solar systems installed</div>
+        </div>
+        <div class="reveal" style="--reveal-delay:.1s">
+          <div class="font-serif text-6xl md:text-7xl leading-none tracking-[-0.02em] counter" data-target="2.4" data-decimals="1">0</div>
+          <div class="text-xs uppercase tracking-[0.2em] text-ink-mute mt-3">MW combined capacity</div>
+        </div>
+        <div class="reveal" style="--reveal-delay:.2s">
+          <div class="font-serif text-6xl md:text-7xl leading-none tracking-[-0.02em] counter" data-target="98">0</div>
+          <div class="text-xs uppercase tracking-[0.2em] text-ink-mute mt-3">% repeat or referred</div>
+        </div>
+        <div class="reveal" style="--reveal-delay:.3s">
+          <div class="font-serif text-6xl md:text-7xl leading-none tracking-[-0.02em] counter" data-target="0">0</div>
+          <div class="text-xs uppercase tracking-[0.2em] text-ink-mute mt-3">Subcontractors used</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW WE WORK -->
+  <section class="relative py-24">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+      <div class="grid lg:grid-cols-12 gap-10 mb-12">
+        <div class="lg:col-span-4">
+          <p class="text-rust text-xs uppercase tracking-[0.3em] font-medium reveal">No. III</p>
+          <h2 class="reveal font-serif text-5xl md:text-6xl leading-[0.95] tracking-[-0.02em] mt-3" style="--reveal-delay:.1s">How we work.</h2>
+        </div>
+        <div class="lg:col-span-8 lg:col-start-6 max-w-2xl">
+          <p class="reveal text-lg text-ink-soft leading-relaxed" style="--reveal-delay:.2s">
+            Four steps, in order. There are never any surprises in the middle.
+          </p>
+        </div>
+      </div>
+
+      <ol class="border-t border-ink/15">
+        <li class="reveal grid md:grid-cols-12 gap-8 py-9 border-b border-ink/15">
+          <div class="md:col-span-1 font-serif text-2xl text-rust">i.</div>
+          <h3 class="md:col-span-3 font-serif text-2xl tracking-[-0.01em]">Survey</h3>
+          <p class="md:col-span-8 text-ink-mute leading-relaxed">We come to you, look at the roof, the loft, the consumer unit. We measure shading and check the structure. The visit is free and you're under no obligation.</p>
+        </li>
+        <li class="reveal grid md:grid-cols-12 gap-8 py-9 border-b border-ink/15" style="--reveal-delay:.05s">
+          <div class="md:col-span-1 font-serif text-2xl text-rust">ii.</div>
+          <h3 class="md:col-span-3 font-serif text-2xl tracking-[-0.01em]">Quote</h3>
+          <p class="md:col-span-8 text-ink-mute leading-relaxed">A clear, itemised quote, written in plain English. We will tell you, honestly, if solar isn't right for your roof. No pressure, ever.</p>
+        </li>
+        <li class="reveal grid md:grid-cols-12 gap-8 py-9 border-b border-ink/15" style="--reveal-delay:.1s">
+          <div class="md:col-span-1 font-serif text-2xl text-rust">iii.</div>
+          <h3 class="md:col-span-3 font-serif text-2xl tracking-[-0.01em]">Install</h3>
+          <p class="md:col-span-8 text-ink-mute leading-relaxed">Most domestic systems are commissioned in one to three days. We turn up when we say we will, dust-sheet your hallways, and put the kettle back where you left it.</p>
+        </li>
+        <li class="reveal grid md:grid-cols-12 gap-8 py-9 border-b border-ink/15" style="--reveal-delay:.15s">
+          <div class="md:col-span-1 font-serif text-2xl text-rust">iv.</div>
+          <h3 class="md:col-span-3 font-serif text-2xl tracking-[-0.01em]">Aftercare</h3>
+          <p class="md:col-span-8 text-ink-mute leading-relaxed">25-year panel warranty as standard. We answer the phone ourselves &mdash; not a call centre &mdash; and we're still here a decade later if you want to add a battery, an EV charger, or a second array.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ACCREDITATIONS -->
+  <section class="relative py-20 border-t border-ink/10 bg-paper-deep">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+      <p class="text-center text-ink-mute uppercase tracking-[0.3em] text-xs font-medium mb-12 reveal">Approved &amp; accredited by</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="reveal text-center py-7 border border-ink/15">
+          <div class="font-serif text-3xl tracking-[-0.02em]">NICEIC</div>
+          <div class="text-[10px] uppercase tracking-[0.25em] text-ink-mute mt-2">Approved Contractor</div>
+        </div>
+        <div class="reveal text-center py-7 border border-ink/15" style="--reveal-delay:.1s">
+          <div class="font-serif text-3xl tracking-[-0.02em]">MCS</div>
+          <div class="text-[10px] uppercase tracking-[0.25em] text-ink-mute mt-2">Solar PV Certified</div>
+        </div>
+        <div class="reveal text-center py-7 border border-ink/15" style="--reveal-delay:.2s">
+          <div class="font-serif text-3xl tracking-[-0.02em]">RECC</div>
+          <div class="text-[10px] uppercase tracking-[0.25em] text-ink-mute mt-2">Consumer Code</div>
+        </div>
+        <div class="reveal text-center py-7 border border-ink/15" style="--reveal-delay:.3s">
+          <div class="font-serif text-3xl tracking-[-0.02em]">OZEV</div>
+          <div class="text-[10px] uppercase tracking-[0.25em] text-ink-mute mt-2">EV Installer</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================
+     SERVICES TAB — editorial article style
+     ============================================================ -->
+<main id="tab-services" class="tab-panel hidden pt-20">
+
+  <section class="relative pt-16 pb-12">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+      <div class="border-b border-ink/15 pb-4 mb-16 text-[11px] uppercase tracking-[0.3em] text-ink-mute reveal">
+        Volume I &middot; Services offered
+      </div>
+      <div class="grid lg:grid-cols-12 gap-10">
+        <div class="lg:col-span-7">
+          <p class="text-rust text-xs uppercase tracking-[0.3em] font-medium reveal">Four trades, one firm</p>
+          <h1 class="reveal font-serif text-[14vw] sm:text-[10vw] lg:text-[7.5rem] xl:text-[8.5rem] leading-[0.92] tracking-[-0.03em] font-light mt-6" style="--reveal-delay:.1s">
+            Everything<br/>
+            you'll <em class="italic font-normal text-rust">need.</em>
+          </h1>
+        </div>
+        <div class="lg:col-span-5 lg:pb-6 max-w-md">
+          <p class="reveal text-lg text-ink-soft leading-relaxed" style="--reveal-delay:.2s">
+            Domestic and commercial. From a single socket to a full solar &amp; battery system. The same qualified hands across all four disciplines.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- four article-style services -->
+  <section class="relative py-12">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-12 space-y-24">
+
+      <article class="reveal grid lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-7 order-2 lg:order-1">
+          <div class="flex items-baseline gap-5 mb-5">
+            <span class="font-serif text-rust text-3xl">01.</span>
+            <span class="text-[11px] uppercase tracking-[0.3em] text-ink-mute">Solar PV</span>
+          </div>
+          <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl tracking-[-0.02em] leading-[1] mb-7">
+            Solar PV<br/>installation.
+          </h2>
+          <p class="text-ink-soft leading-relaxed text-lg max-w-xl">
+            Roof, ground or in-roof systems for homes and businesses. JA Solar, Longi, SolarEdge, SunSynk inverters &mdash; specced to your roof, your bills and your tariff.
+          </p>
+          <ul class="mt-7 grid sm:grid-cols-2 gap-y-2.5 gap-x-6 text-sm text-ink-soft max-w-md">
+            <li class="flex items-baseline gap-2"><span class="text-rust">&mdash;</span> MCS-certified design</li>
+            <li class="flex items-baseline gap-2"><span class="text-rust">&mdash;</span> 25-year panel warranty</li>
+            <li class="flex items-baseline gap-2"><span class="text-rust">&mdash;</span> DNO application included</li>
+            <li class="flex items-baseline gap-2"><span class="text-rust">&mdash;</span> Smart export tariff ready</li>
+          </ul>
+        </div>
+        <figure class="lg:col-span-5 order-1 lg:order-2">
+          <div class="aspect-[4/5] overflow-hidden">
+            <img data-zoom="0.07" src="https://images.pexels.com/photos/9875448/pexels-photo-9875448.jpeg?auto=compress&cs=tinysrgb&w=1000" class="w-full h-full object-cover will-change-transform" alt="" />
+          </div>
+        </figure>
+      </article>
+
+      <article class="reveal grid lg:grid-cols-12 gap-10 items-center">
+        <figure class="lg:col-span-5">
+          <div class="aspect-[4/5] overflow-hidden">
+            <img data-zoom="0.07" src="https://images.pexels.com/photos/8853504/pexels-photo-8853504.jpeg?auto=compress&cs=tinysrgb&w=1000" class="w-full h-full object-cover will-change-transform" alt="" />
+          </div>
+        </figure>
+        <div class="lg:col-span-7">
+          <div class="flex items-baseline gap-5 mb-5">
+            <span class="font-serif text-rust text-3xl">02.</span>
+            <span class="text-[11px] uppercase tracking-[0.3em] text-ink-mute">Battery storage</span>
+          </div>
+          <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl tracking-[-0.02em] leading-[1] mb-7">
+            Battery<br/>storage.
+          </h2>
+          <p class="text-ink-soft leading-relaxed text-lg max-w-xl">
+            Tesla Powerwall, GivEnergy, SunSynk &mdash; we install and support them all. Add storage to a new or existing solar system to use your own power after dark.
+          </p>
+          <ul class="mt-7 grid sm:grid-cols-2 gap-y-2.5 gap-x-6 text-sm text-ink-soft max-w-md">
+            <li class="flex items-baseline gap-2"><span class="text-rust">&mdash;</span> 5&ndash;30 kWh sizing</li>
+            <li class="flex items-baseline gap-2"><span class="text-rust">&mdash;</span> AC or DC coupled</li>
+            <li class="flex items-baseline gap-2"><span class="text-rust">&mdash;</span> Off-peak charging</li>
+            <li class="flex items-baseline gap-2"><span class="text-rust">&mdash;</span> Backup-power option</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="reveal grid lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-7 order-2 lg:order-1">
+          <div class="flex items-baseline gap-5 mb-5">
+            <span class="font-serif text-rust text-3xl">03.</span>
+            <span class="text-[11px] uppercase tracking-[0.3em] text-ink-mute">EV charging</span>
+          </div>
+          <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl tracking-[-0.02em] leading-[1] mb-7">
+            EV chargers.
+          </h2>
+          <p class="text-ink-soft leading-relaxed text-lg max-w-xl">
+            7 kW home chargers from Zappi, Ohme, Hypervolt and Wallbox. Solar-aware models that prioritise the free electricity from your roof over grid power.
+          </p>
+          <ul class="mt-7 grid sm:grid-cols-2 gap-y-2.5 gap-x-6 text-sm text-ink-soft max-w-md">
+            <li class="flex items-baseline gap-2"><span class="text-rust">&mdash;</span> OZEV-approved installer</li>
+            <li class="flex items-baseline gap-2"><span class="text-rust">&mdash;</span> Tethered or socketed</li>
+            <li class="flex items-baseline gap-2"><span class="text-rust">&mdash;</span> Solar-divert capable</li>
+            <li class="flex items-baseline gap-2"><span class="text-rust">&mdash;</span> 3-year warranty</li>
+          </ul>
+        </div>
+        <figure class="lg:col-span-5 order-1 lg:order-2">
+          <div class="aspect-[4/5] overflow-hidden">
+            <img data-zoom="0.07" src="https://images.pexels.com/photos/5391510/pexels-photo-5391510.jpeg?auto=compress&cs=tinysrgb&w=1000" class="w-full h-full object-cover will-change-transform" alt="" />
+          </div>
+        </figure>
+      </article>
+
+      <article class="reveal grid lg:grid-cols-12 gap-10 items-center">
+        <figure class="lg:col-span-5">
+          <div class="aspect-[4/5] overflow-hidden">
+            <img data-zoom="0.07" src="https://images.pexels.com/photos/9679179/pexels-photo-9679179.jpeg?auto=compress&cs=tinysrgb&w=1000" class="w-full h-full object-cover will-change-transform" alt="" />
+          </div>
+        </figure>
+        <div class="lg:col-span-7">
+          <div class="flex items-baseline gap-5 mb-5">
+            <span class="font-serif text-rust text-3xl">04.</span>
+            <span class="text-[11px] uppercase tracking-[0.3em] text-ink-mute">Electrical</span>
+          </div>
+          <h2 class="font-serif text-4xl md:text-5xl lg:text-6xl tracking-[-0.02em] leading-[1] mb-7">
+            Domestic &amp;<br/>commercial<br/>electrical.
+          </h2>
+          <p class="text-ink-soft leading-relaxed text-lg max-w-xl">
+            Full rewires, fuse-board upgrades, EICR reports, fault finding, lighting, sockets, three-phase commercial work &mdash; the everyday electrical jobs that make a building feel new again.
+          </p>
+          <ul class="mt-7 grid sm:grid-cols-2 gap-y-2.5 gap-x-6 text-sm text-ink-soft max-w-md">
+            <li class="flex items-baseline gap-2"><span class="text-rust">&mdash;</span> Part-P certified</li>
+            <li class="flex items-baseline gap-2"><span class="text-rust">&mdash;</span> EICRs in 48 hours</li>
+            <li class="flex items-baseline gap-2"><span class="text-rust">&mdash;</span> Landlord testing</li>
+            <li class="flex items-baseline gap-2"><span class="text-rust">&mdash;</span> Three-phase work</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="relative py-24 border-t border-ink/10 bg-paper-deep mt-16">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-12 grid md:grid-cols-3 gap-10">
+      <div class="reveal">
+        <div class="font-serif text-6xl md:text-7xl leading-none tracking-[-0.02em] text-rust">£0</div>
+        <div class="text-xs uppercase tracking-[0.2em] text-ink-mute mt-3">Survey &amp; quote</div>
+      </div>
+      <div class="reveal" style="--reveal-delay:.1s">
+        <div class="font-serif text-6xl md:text-7xl leading-none tracking-[-0.02em] text-rust">1&ndash;3</div>
+        <div class="text-xs uppercase tracking-[0.2em] text-ink-mute mt-3">Days on site</div>
+      </div>
+      <div class="reveal" style="--reveal-delay:.2s">
+        <div class="font-serif text-6xl md:text-7xl leading-none tracking-[-0.02em] text-rust">25</div>
+        <div class="text-xs uppercase tracking-[0.2em] text-ink-mute mt-3">Year warranty</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================
+     CONTACT TAB
+     ============================================================ -->
+<main id="tab-contact" class="tab-panel hidden pt-20">
+
+  <section class="relative pt-16 pb-24">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+
+      <div class="border-b border-ink/15 pb-4 mb-16 text-[11px] uppercase tracking-[0.3em] text-ink-mute reveal">
+        Volume I &middot; Correspondence
+      </div>
+
+      <div class="grid lg:grid-cols-12 gap-10 lg:gap-16">
+
+        <div class="lg:col-span-5">
+          <p class="text-rust text-xs uppercase tracking-[0.3em] font-medium reveal">Get in touch</p>
+          <h1 class="reveal font-serif text-[14vw] sm:text-[10vw] lg:text-[6.5rem] xl:text-[8rem] leading-[0.92] tracking-[-0.03em] font-light mt-6" style="--reveal-delay:.1s">
+            Let's talk<br/>
+            <em class="italic font-normal text-rust">solar.</em>
+          </h1>
+          <p class="reveal mt-8 text-ink-soft text-lg leading-relaxed max-w-md" style="--reveal-delay:.2s">
+            Drop us a message, or pick up the phone. We aim to reply within one working day.
+          </p>
+
+          <div class="mt-12 space-y-7">
+            <a href="tel:01422204249" class="reveal group block border-b border-ink/15 pb-5" style="--reveal-delay:.3s">
+              <div class="text-[10px] uppercase tracking-[0.25em] text-ink-mute">Office</div>
+              <div class="font-serif text-3xl tracking-[-0.01em] mt-1 group-hover:text-rust transition">01422 204249</div>
+            </a>
+            <a href="tel:07999161125" class="reveal group block border-b border-ink/15 pb-5" style="--reveal-delay:.35s">
+              <div class="text-[10px] uppercase tracking-[0.25em] text-ink-mute">Mobile</div>
+              <div class="font-serif text-3xl tracking-[-0.01em] mt-1 group-hover:text-rust transition">07999 161125</div>
+            </a>
+            <a href="mailto:info@dinesinstallations.co.uk" class="reveal group block border-b border-ink/15 pb-5" style="--reveal-delay:.4s">
+              <div class="text-[10px] uppercase tracking-[0.25em] text-ink-mute">Email</div>
+              <div class="font-serif text-2xl tracking-[-0.01em] mt-1 group-hover:text-rust transition break-all">info@dinesinstallations.co.uk</div>
+            </a>
+            <div class="reveal" style="--reveal-delay:.45s">
+              <div class="text-[10px] uppercase tracking-[0.25em] text-ink-mute">Studio</div>
+              <div class="font-serif text-2xl tracking-[-0.01em] mt-1">4 Westminster Rd,<br/>Halifax HX3 8DH</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7">
+          <form id="contactForm" class="reveal" style="--reveal-delay:.2s">
+            <h2 class="font-serif text-3xl md:text-4xl tracking-[-0.02em] leading-tight mb-2">Tell us about your project.</h2>
+            <p class="text-ink-mute text-sm">All fields marked &middot; are required.</p>
+
+            <div class="mt-10 space-y-7">
+              <label class="block">
+                <span class="text-[10px] uppercase tracking-[0.25em] text-ink-mute">Your name &middot;</span>
+                <input type="text" required class="mt-2 w-full bg-transparent border-0 border-b border-ink/25 focus:border-ink rounded-none px-0 py-2.5 outline-none transition placeholder:text-ink-mute/50 font-serif text-xl" placeholder="Jane Doe" />
+              </label>
+              <div class="grid sm:grid-cols-2 gap-7">
+                <label class="block">
+                  <span class="text-[10px] uppercase tracking-[0.25em] text-ink-mute">Email &middot;</span>
+                  <input type="email" required class="mt-2 w-full bg-transparent border-0 border-b border-ink/25 focus:border-ink rounded-none px-0 py-2.5 outline-none transition placeholder:text-ink-mute/50 font-serif text-xl" placeholder="you@example.com" />
+                </label>
+                <label class="block">
+                  <span class="text-[10px] uppercase tracking-[0.25em] text-ink-mute">Phone</span>
+                  <input type="tel" class="mt-2 w-full bg-transparent border-0 border-b border-ink/25 focus:border-ink rounded-none px-0 py-2.5 outline-none transition placeholder:text-ink-mute/50 font-serif text-xl" placeholder="07XXX XXX XXX" />
+                </label>
+              </div>
+              <label class="block">
+                <span class="text-[10px] uppercase tracking-[0.25em] text-ink-mute">Postcode</span>
+                <input type="text" class="mt-2 w-full bg-transparent border-0 border-b border-ink/25 focus:border-ink rounded-none px-0 py-2.5 outline-none transition placeholder:text-ink-mute/50 font-serif text-xl" placeholder="HX3 8DH" />
+              </label>
+              <label class="block">
+                <span class="text-[10px] uppercase tracking-[0.25em] text-ink-mute">What do you need? &middot;</span>
+                <select class="mt-2 w-full bg-transparent border-0 border-b border-ink/25 focus:border-ink rounded-none px-0 py-2.5 outline-none transition font-serif text-xl">
+                  <option>Solar PV</option>
+                  <option>Battery storage</option>
+                  <option>EV charger</option>
+                  <option>Electrical work</option>
+                  <option>Solar + battery + EV bundle</option>
+                  <option>I'm not sure &mdash; need advice</option>
+                </select>
+              </label>
+              <label class="block">
+                <span class="text-[10px] uppercase tracking-[0.25em] text-ink-mute">Anything else?</span>
+                <textarea rows="4" class="mt-2 w-full bg-transparent border-0 border-b border-ink/25 focus:border-ink rounded-none px-0 py-2.5 outline-none transition placeholder:text-ink-mute/50 font-serif text-xl resize-none" placeholder="Roof type, current bills, timescale&hellip;"></textarea>
+              </label>
+            </div>
+
+            <button type="submit" class="mt-10 inline-flex items-center gap-3 bg-ink hover:bg-rust transition text-paper px-8 py-4 rounded-full text-sm tracking-wide group">
+              Send enquiry
+              <svg viewBox="0 0 24 24" fill="currentColor" class="h-3.5 w-3.5 transition group-hover:translate-x-1"><path d="M13.5 4.5 21 12l-7.5 7.5-1.06-1.06 5.69-5.69H3v-1.5h15.13l-5.69-5.69 1.06-1.06Z"/></svg>
+            </button>
+            <p id="formStatus" class="mt-4 text-sm text-rust hidden">Thank you &mdash; we'll be in touch shortly.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- service area -->
+  <section class="relative py-20 border-t border-ink/10 bg-paper-deep">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+      <p class="text-rust text-xs uppercase tracking-[0.3em] font-medium reveal">Service area</p>
+      <h2 class="font-serif text-4xl md:text-5xl tracking-[-0.02em] mt-3 reveal" style="--reveal-delay:.1s">Halifax &amp; West Yorkshire.</h2>
+      <p class="reveal text-ink-mute mt-6 max-w-md" style="--reveal-delay:.15s">We work primarily across the Calder Valley and surrounding towns:</p>
+      <div class="mt-8 flex flex-wrap gap-x-6 gap-y-3 font-serif text-2xl tracking-[-0.01em]">
+        <span class="reveal">Halifax</span>
+        <span class="text-ink/30">&middot;</span>
+        <span class="reveal" style="--reveal-delay:.05s">Brighouse</span>
+        <span class="text-ink/30">&middot;</span>
+        <span class="reveal" style="--reveal-delay:.1s">Huddersfield</span>
+        <span class="text-ink/30">&middot;</span>
+        <span class="reveal" style="--reveal-delay:.15s">Bradford</span>
+        <span class="text-ink/30">&middot;</span>
+        <span class="reveal" style="--reveal-delay:.2s">Sowerby Bridge</span>
+        <span class="text-ink/30">&middot;</span>
+        <span class="reveal" style="--reveal-delay:.25s">Hebden Bridge</span>
+        <span class="text-ink/30">&middot;</span>
+        <span class="reveal" style="--reveal-delay:.3s">Leeds</span>
+        <span class="text-ink/30">&middot;</span>
+        <span class="reveal" style="--reveal-delay:.35s">Wakefield</span>
+        <span class="text-ink/30">&middot;</span>
+        <span class="reveal" style="--reveal-delay:.4s">Keighley</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="bg-ink text-paper">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-12 py-16 grid md:grid-cols-12 gap-10">
+    <div class="md:col-span-5">
+      <img src="../assets/logo.png" alt="Dines Installations" class="h-12 w-auto brightness-0 invert" />
+      <p class="mt-6 text-paper/70 max-w-md">Family-run electricians delivering solar PV, battery, EV and electrical solutions across West Yorkshire. NICEIC, MCS, RECC and OZEV approved.</p>
+    </div>
+    <div class="md:col-span-3">
+      <div class="text-[10px] uppercase tracking-[0.25em] text-paper/50 mb-4">Sections</div>
+      <ul class="space-y-2 font-serif text-xl">
+        <li><button data-tab="home"     class="tab-link hover:text-rust">Home</button></li>
+        <li><button data-tab="about"    class="tab-link hover:text-rust">About</button></li>
+        <li><button data-tab="services" class="tab-link hover:text-rust">Services</button></li>
+        <li><button data-tab="contact"  class="tab-link hover:text-rust">Contact</button></li>
+      </ul>
+    </div>
+    <div class="md:col-span-4">
+      <div class="text-[10px] uppercase tracking-[0.25em] text-paper/50 mb-4">Contact</div>
+      <ul class="space-y-2 text-paper/80">
+        <li><a href="tel:01422204249" class="hover:text-rust">01422 204249</a></li>
+        <li><a href="tel:07999161125" class="hover:text-rust">07999 161125</a></li>
+        <li><a href="mailto:info@dinesinstallations.co.uk" class="hover:text-rust break-all">info@dinesinstallations.co.uk</a></li>
+        <li>4 Westminster Rd, Halifax HX3 8DH</li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-paper/10">
+    <div class="max-w-[1400px] mx-auto px-6 lg:px-12 py-6 flex flex-wrap items-center justify-between gap-3 text-xs text-paper/40">
+      <div>&copy; <span id="year"></span> Dines Installations LTD.</div>
+      <div>Photos: Pexels &middot; Built with TailwindCSS</div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
