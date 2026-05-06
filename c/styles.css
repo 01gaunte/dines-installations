@@ -2,8 +2,18 @@
    Dines Installations — Design C (cinematic dark)
    ============================================================ */
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+  scroll-padding-top: 5rem; /* offset for fixed header */
+}
 body { font-feature-settings: "ss01", "cv11"; }
+
+/* Indexed scroll — each top-level section snaps to top */
+main.tab-panel > section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
 
 ::-webkit-scrollbar { width: 10px; }
 ::-webkit-scrollbar-track { background: #070a0f; }

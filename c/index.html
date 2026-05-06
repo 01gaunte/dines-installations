@@ -54,10 +54,10 @@
 <!-- ============================================================
      NAV
      ============================================================ -->
-<header class="fixed top-0 inset-x-0 z-40 mix-blend-difference">
+<header class="fixed top-0 inset-x-0 z-40 bg-night-900/40 backdrop-blur-md border-b border-white/5">
   <div class="max-w-[1600px] mx-auto px-6 lg:px-10 h-20 flex items-center justify-between text-white">
     <a href="#home" data-tab="home" data-no-highlight class="tab-link flex items-center gap-3 group">
-      <img src="../assets/logo.png" alt="Dines Installations" class="h-9 sm:h-10 w-auto invert brightness-200" />
+      <img src="../assets/logo.png" alt="Dines Installations" class="h-9 sm:h-10 w-auto" />
     </a>
     <nav class="hidden md:flex items-center gap-8">
       <button data-tab="home"     class="tab-link text-[11px] uppercase tracking-[0.25em] hover:text-gold transition">Home</button>
@@ -136,14 +136,6 @@
 
     <!-- Layer 4: corner instrument labels -->
     <div class="absolute inset-0 pointer-events-none">
-      <!-- top-left -->
-      <div class="absolute top-24 left-6 lg:left-10 font-mono text-[10px] tracking-[0.2em] text-white/50">
-        <div class="flex items-center gap-2">
-          <span class="h-px w-6 bg-gold"></span>
-          <span>VOLUME I &middot; CHAPTER 01</span>
-        </div>
-        <div class="mt-2">N 53.7257°&nbsp;&middot;&nbsp;W 01.8634°</div>
-      </div>
       <!-- top-right (below sun) -->
       <div class="absolute top-[42%] right-6 lg:right-10 hidden lg:block writing-vertical font-mono text-[10px] tracking-[0.4em] text-white/40 uppercase">
         Dines &mdash; Vol. <span id="yearSide"></span> &mdash; Halifax HX3
@@ -165,7 +157,7 @@
     <div class="relative z-10 min-h-[100svh] flex items-center">
       <div class="w-full max-w-[1600px] mx-auto px-6 lg:px-10">
         <div class="max-w-5xl">
-          <p data-reveal class="text-gold font-mono text-xs tracking-[0.4em] uppercase mb-6">A Halifax solar firm</p>
+          <p data-reveal class="text-gold font-mono text-xs tracking-[0.4em] uppercase mb-6">A Halifax solar company</p>
           <h1 class="font-display tracking-tight uppercase leading-[0.82] text-[19vw] lg:text-[14vw] xl:text-[13rem]">
             <span data-reveal class="block">Power</span>
             <span data-reveal class="block" style="--reveal-delay:.12s">from the</span>
@@ -351,7 +343,7 @@
       <div class="absolute inset-0 bg-gradient-to-b from-night-900/80 via-night-900/90 to-night-900"></div>
     </div>
     <div class="relative max-w-[1600px] mx-auto px-6 lg:px-10">
-      <p class="text-gold font-mono text-[10px] uppercase tracking-[0.4em] mb-5 reveal">/ About the firm</p>
+      <p class="text-gold font-mono text-[10px] uppercase tracking-[0.4em] mb-5 reveal">/ About the company</p>
       <h1 class="font-display text-7xl md:text-9xl lg:text-[12rem] uppercase tracking-tight leading-[0.85] reveal" style="--reveal-delay:.1s">
         Local sparks.<br/><span class="text-gold">Renewable focus.</span>
       </h1>
