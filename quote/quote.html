@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Quote — Dines Installations website</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  /* ---- print page setup ---- */
+  @page { size: A4; margin: 0; }
+  @media print {
+    html, body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+
+  :root {
+    --orange: #ff5e0e;
+    --ink:    #0c1116;
+    --soft:   #4a5662;
+    --line:   #e5e7eb;
+    --muted:  #6b7280;
+    --paper:  #ffffff;
+    --tint:   #fafaf7;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', -apple-system, system-ui, sans-serif;
+    font-size: 10pt;
+    color: var(--ink);
+    background: var(--paper);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+  }
+
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    padding: 18mm 18mm 16mm;
+    margin: 0 auto;
+    background: var(--paper);
+    page-break-after: always;
+  }
+  .page:last-of-type { page-break-after: auto; }
+
+  /* ---- header ---- */
+  .doc-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 2px solid var(--ink);
+    padding-bottom: 14px;
+    margin-bottom: 22px;
+  }
+  .from { line-height: 1.45; }
+  .from .name { font-size: 14pt; font-weight: 600; letter-spacing: -0.01em; }
+  .from .meta { font-size: 9pt; color: var(--muted); margin-top: 2px; }
+  .doc-meta { text-align: right; }
+  .doc-meta .label { font-size: 8pt; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
+  .doc-meta .value { font-size: 11pt; font-weight: 500; margin-top: 2px; }
+  .doc-meta .row + .row { margin-top: 8px; }
+  .logo { height: 36px; width: auto; display: block; margin-left: auto; margin-bottom: 6px; }
+
+  /* ---- to / project ---- */
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+    margin-bottom: 22px;
+  }
+  .info-block .label {
+    font-size: 8pt; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 6px;
+  }
+  .info-block .body { font-size: 10pt; }
+  .info-block .body strong { font-weight: 600; }
+
+  /* ---- title ---- */
+  h1.doc-title {
+    font-size: 28pt;
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    font-weight: 600;
+    margin: 0 0 4px;
+  }
+  h1.doc-title em { font-style: italic; font-weight: 500; color: var(--orange); }
+  .subtitle { color: var(--soft); font-size: 11pt; margin-bottom: 22px; }
+
+  /* ---- section ---- */
+  h2.section {
+    font-size: 9pt; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--orange); font-weight: 600;
+    margin: 22px 0 10px;
+  }
+  h3 { font-size: 11pt; margin: 16px 0 4px; font-weight: 600; }
+
+  /* ---- pricing table ---- */
+  table.lines {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 6px;
+  }
+  table.lines th, table.lines td {
+    text-align: left;
+    padding: 10px 12px;
+    vertical-align: top;
+  }
+  table.lines th {
+    font-size: 8pt; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--muted); font-weight: 500;
+    border-bottom: 1.5px solid var(--ink);
+  }
+  table.lines td {
+    border-bottom: 1px solid var(--line);
+  }
+  table.lines tr:last-child td { border-bottom: none; }
+  table.lines .item .title { font-weight: 600; font-size: 10.5pt; }
+  table.lines .item .desc  { color: var(--soft); font-size: 9pt; margin-top: 2px; }
+  table.lines .qty { color: var(--muted); font-size: 9pt; }
+  table.lines .price { text-align: right; font-weight: 600; font-size: 11pt; white-space: nowrap; }
+  table.lines .price small { display: block; font-weight: 400; color: var(--muted); font-size: 8.5pt; margin-top: 2px; }
+
+  table.lines .total td {
+    border-top: 2px solid var(--ink);
+    padding-top: 12px;
+    font-size: 11pt;
+    font-weight: 600;
+  }
+  table.lines .total .price { font-size: 13pt; color: var(--orange); }
+
+  /* ---- inclusions list ---- */
+  ul.list { margin: 6px 0; padding: 0; list-style: none; }
+  ul.list li {
+    padding: 6px 0 6px 18px;
+    position: relative;
+    border-bottom: 1px dashed var(--line);
+  }
+  ul.list li:last-child { border-bottom: none; }
+  ul.list li::before {
+    content: "✓";
+    position: absolute; left: 0; top: 6px;
+    color: var(--orange);
+    font-weight: 700;
+  }
+
+  /* ---- terms blocks ---- */
+  .terms {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 6px;
+  }
+  .term {
+    background: var(--tint);
+    border-left: 3px solid var(--orange);
+    padding: 12px 14px;
+    border-radius: 2px;
+  }
+  .term .key { font-size: 8pt; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); margin-bottom: 3px; font-weight: 600; }
+  .term p { margin: 0; font-size: 9.5pt; line-height: 1.5; color: var(--ink); }
+  .term p + p { margin-top: 6px; }
+
+  /* ---- footer ---- */
+  .accept {
+    margin-top: 26px;
+    border-top: 1px solid var(--line);
+    padding-top: 18px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  .sigline { border-bottom: 1px solid var(--ink); height: 32px; }
+  .sigcap { font-size: 8pt; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); margin-top: 6px; }
+
+  .doc-foot {
+    margin-top: 24px;
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    color: var(--muted);
+    font-size: 8.5pt;
+    letter-spacing: 0.04em;
+  }
+
+  .pull-quote {
+    background: var(--ink);
+    color: #fff;
+    padding: 18px 22px;
+    margin: 18px 0 4px;
+    border-radius: 4px;
+    font-size: 11.5pt;
+    line-height: 1.4;
+    letter-spacing: -0.005em;
+  }
+  .pull-quote em { color: var(--orange); font-style: normal; font-weight: 600; }
+
+  /* ---- Bia Credits callout ---- */
+  .credits-card {
+    margin-top: 16px;
+    padding: 18px 22px;
+    border-radius: 6px;
+    background: linear-gradient(135deg, #fff5ec 0%, #ffe6d0 100%);
+    border: 2px solid var(--orange);
+    position: relative;
+  }
+  .credits-card .badge-row {
+    display: flex; align-items: center; gap: 10px;
+    margin-bottom: 8px;
+  }
+  .credits-card .badge {
+    display: inline-block;
+    background: var(--orange);
+    color: #fff;
+    font-size: 7.5pt;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    padding: 3px 10px;
+    border-radius: 100px;
+    text-transform: uppercase;
+  }
+  .credits-card .alt {
+    font-size: 8pt; letter-spacing: 0.18em; text-transform: uppercase; color: var(--soft);
+  }
+  .credits-card h3 { margin: 0 0 8px; font-size: 13pt; color: var(--ink); letter-spacing: -0.01em; }
+  .credits-card p { margin: 0; font-size: 10pt; color: var(--ink); line-height: 1.55; }
+  .credits-card p + p { margin-top: 6px; }
+  .credits-card .small {
+    margin-top: 10px;
+    font-size: 8.5pt;
+    color: var(--soft);
+    font-style: italic;
+    line-height: 1.5;
+  }
+  .credits-card strong { font-weight: 600; }
+  .credits-card em { color: var(--orange); font-style: normal; font-weight: 600; }
+</style>
+</head>
+<body>
+
+<!-- =========================================================
+     PAGE 1
+     ========================================================= -->
+<section class="page">
+
+  <!-- HEADER -->
+  <header class="doc-head">
+    <div class="from" style="display:flex; align-items:center; gap:12px;">
+      <img src="../assets/bia-electric-icon.png" alt="Bia Electric" style="height:38px; width:38px; flex-shrink:0;" />
+      <div>
+        <div class="name">Bia Electric</div>
+        <div class="meta">
+          Tim Gauntlett &middot; web design &amp; development<br/>
+          <a href="mailto:tim@bia-electric.com" style="color:inherit; text-decoration:none;">tim@bia-electric.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="doc-meta">
+      <img class="logo" src="../assets/logo.png" alt="Dines Installations" />
+      <div class="row">
+        <div class="label">Quote no.</div>
+        <div class="value">DI&ndash;2026&ndash;001</div>
+      </div>
+      <div class="row">
+        <div class="label">Issued</div>
+        <div class="value" id="dateOut">—</div>
+      </div>
+      <div class="row">
+        <div class="label">Valid for</div>
+        <div class="value">14 days</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- WHO / WHAT -->
+  <div class="info-grid">
+    <div class="info-block">
+      <div class="label">Prepared for</div>
+      <div class="body">
+        <strong>Alan Dines</strong><br/>
+        Dines Installations LTD<br/>
+        4 Westminster Rd, Halifax HX3 8DH<br/>
+        info@dinesinstallations.co.uk &middot; 01422 204249
+      </div>
+    </div>
+    <div class="info-block">
+      <div class="label">Project</div>
+      <div class="body">
+        New marketing website for Dines Installations &mdash; a single-page site showcasing solar PV, battery, EV and electrical work, with optional self-serve content management and ongoing care.
+      </div>
+    </div>
+  </div>
+
+  <h1 class="doc-title">A new website,<br/><em>quoted simply.</em></h1>
+  <p class="subtitle">A finished site, plus the option of a quiet life keeping it running.</p>
+
+  <!-- PRICING -->
+  <h2 class="section">Pricing</h2>
+  <table class="lines">
+    <thead>
+      <tr>
+        <th style="width:54%">Item</th>
+        <th style="width:18%">Type</th>
+        <th style="width:28%; text-align:right">Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="item">
+        <td>
+          <div class="title">Website build</div>
+          <div class="desc">Complete marketing site, four sections (Home, About, Services, Contact). Mobile-responsive, optimised for speed and search. Pexels-licensed imagery. Source code zipped and emailed to you on commissioning.</div>
+        </td>
+        <td><span class="qty">One-off</span></td>
+        <td class="price">£400.00</td>
+      </tr>
+      <tr class="item">
+        <td>
+          <div class="title">CMS add-on <span style="color:var(--muted); font-weight:400; font-size:9pt;">(optional)</span></div>
+          <div class="desc">A self-serve admin where you can edit copy, swap images, manage testimonials and add new project case studies without a developer. Includes 30 minutes of training and a written quick-start guide.</div>
+        </td>
+        <td><span class="qty">One-off</span></td>
+        <td class="price">£195.00</td>
+      </tr>
+      <tr class="item">
+        <td>
+          <div class="title">Annual hosting &amp; care</div>
+          <div class="desc">Site hosted on Vercel's global edge network. SSL certificate, .co.uk domain renewal, monthly security/dependency updates, off-site Git backup. 99.9% uptime target.</div>
+        </td>
+        <td><span class="qty">Per year</span></td>
+        <td class="price">£180.00<small>renews annually</small></td>
+      </tr>
+      <tr class="item">
+        <td>
+          <div class="title">Content edits</div>
+          <div class="desc">Copy changes, image swaps, adding/removing testimonials or service lines, contact-detail updates &mdash; anything up to 30 minutes of work. Completed within 5 working days.</div>
+        </td>
+        <td><span class="qty">Per edit</span></td>
+        <td class="price">£50.00<small>as required</small></td>
+      </tr>
+
+      <tr class="total">
+        <td colspan="2">
+          <div class="title">Day-one cost &mdash; build + first year hosting</div>
+          <div class="desc" style="color:var(--muted); font-size:9pt; margin-top:2px;">Add the CMS for £195 if you'd like to edit the site yourself. Edits at £50 each on demand.</div>
+        </td>
+        <td class="price">£580.00</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="pull-quote">
+    The site itself is <em>yours, in full</em>, the moment you pay. The annual fee is for the service of running it &mdash; not a licence to use it.
+  </div>
+
+  <!-- BIA ELECTRIC CREDITS CALLOUT -->
+  <div class="credits-card">
+    <div class="badge-row">
+      <img src="../assets/bia-electric-icon.png" alt="Bia Electric" style="height:22px; width:22px;" />
+      <span class="badge">Beta</span>
+      <span class="alt">Alternative payment</span>
+    </div>
+    <h3>Pay with Bia Electric Credits.</h3>
+    <p>
+      Settle your invoice through the Bia Electric Credits programme and the full invoice value is credited back to you as <strong>Bia Credit</strong>, redeemable any time on any Bia Group website or service.
+    </p>
+    <p>
+      Pay <strong>£580</strong> today &mdash; receive the website <em>and</em> <strong>£580 in Bia Credit</strong> to spend across the group on future work, partner sites or services.
+    </p>
+    <p class="small">
+      Beta programme. Credits are non-refundable, non-transferable for cash, and provided as-is, without warranty, while the redemption mechanism is in active development. Redemption rules may evolve.
+    </p>
+  </div>
+
+  <!-- WHAT'S INCLUDED -->
+  <h2 class="section">What's included in the build</h2>
+  <ul class="list">
+    <li>Four pages: Home, About, Services, Contact &mdash; each on its own tab, switching instantly without a reload.</li>
+    <li>Hero gallery showcasing real solar work, animated photo-wall background.</li>
+    <li>Testimonials section with star ratings and aggregate reviews summary.</li>
+    <li>Accreditation cards (NICEIC, MCS, RECC, OZEV) and manufacturer-partner row.</li>
+    <li>Working contact form, click-to-call phone numbers, email links.</li>
+    <li>Mobile-, tablet- and desktop-responsive throughout. Built with TailwindCSS.</li>
+    <li>The full source code, delivered as a ZIP on commissioning &mdash; yours to re-host elsewhere any time, no permission required.</li>
+  </ul>
+
+  <div class="doc-foot">
+    <div>Bia Electric &middot; tim@bia-electric.com</div>
+    <div>Page 1 of 2 &middot; Quote DI&ndash;2026&ndash;001</div>
+  </div>
+</section>
+
+
+<!-- =========================================================
+     PAGE 2 — TERMS & ACCEPTANCE
+     ========================================================= -->
+<section class="page">
+
+  <header class="doc-head">
+    <div class="from">
+      <div class="name">Quote DI&ndash;2026&ndash;001</div>
+      <div class="meta">Terms &amp; acceptance</div>
+    </div>
+    <div class="doc-meta">
+      <img class="logo" src="../assets/logo.png" alt="Dines Installations" />
+      <div class="row">
+        <div class="label">Prepared for</div>
+        <div class="value">Alan Dines</div>
+      </div>
+    </div>
+  </header>
+
+  <h2 class="section">Terms</h2>
+
+  <div class="terms">
+    <div class="term">
+      <div class="key">Payment</div>
+      <p>The site is built. Full payment (£400, plus £180 hosting and the £195 CMS option if taken) is due in full before the site is published. Payment by bank transfer; details on the invoice.</p>
+    </div>
+    <div class="term">
+      <div class="key">Ownership</div>
+      <p>You own the design, code, copy and assets outright. Source code is zipped and emailed on the day payment clears. Re-host elsewhere any time, with no permission required.</p>
+    </div>
+    <div class="term">
+      <div class="key">Hosting &amp; uptime</div>
+      <p>Target uptime is <strong>99.9%</strong>, measured against the upstream provider's status page (about 8.7 hours per year of unscheduled downtime allowed). No service credits or refunds for downtime caused by Vercel, your DNS provider, or anything else outside my direct control.</p>
+    </div>
+    <div class="term">
+      <div class="key">Edits</div>
+      <p>£50 per edit, completed within 5 working days. Same-day urgent edits £100. Out-of-scope work (new pages, layout changes, new features) quoted separately at £75/hour, 1-hour minimum.</p>
+    </div>
+    <div class="term">
+      <div class="key">Renewal</div>
+      <p>Hosting renews annually. Invoice issued 30 days before renewal. 30 days' written notice required to cancel; the site stays live until the end of the paid period.</p>
+    </div>
+    <div class="term">
+      <div class="key">Handover &amp; exit</div>
+      <p>You already hold the source code, so handover is trivial: I send the deployment configuration and the domain transfer code, and another developer can re-host immediately. No additional handover fee.</p>
+    </div>
+    <div class="term">
+      <div class="key">CMS scope</div>
+      <p>The CMS lets you edit existing content &mdash; copy, images, testimonials, project case studies. It is not for layout, structural or design changes; those remain quoted as bespoke work.</p>
+    </div>
+    <div class="term">
+      <div class="key">Validity</div>
+      <p>This quote is valid for 14 days from the issue date above. After that, please request a fresh quote.</p>
+    </div>
+    <div class="term" style="grid-column: 1 / -1; border-left-color: var(--orange); background: linear-gradient(135deg, #fff5ec 0%, #ffe6d0 100%);">
+      <div class="key" style="color: var(--orange); display:flex; align-items:center; gap:8px;">
+        <img src="../assets/bia-electric-icon.png" alt="" style="height:16px; width:16px;" />
+        Bia Electric Credits &middot; beta programme
+      </div>
+      <p>Optional alternative to bank transfer. Settle any invoice through the Bia Electric Credits programme and the full invoice value is returned to your account as <strong>Bia Credit</strong>, redeemable on any Bia Group website or service.</p>
+      <p>Credits are non-refundable, non-transferable for cash, and have no fixed expiry while the programme remains active. Provided <strong>as-is, without warranty</strong>; redemption rules may change as the system develops. Bia Group reserves the right to amend or wind down the programme with 30 days' notice, in which case any outstanding credit value will be honoured against the originating invoice in cash equivalent.</p>
+    </div>
+  </div>
+
+  <h2 class="section" style="margin-top: 26px;">Acceptance</h2>
+  <p style="font-size:10pt; color:var(--soft); margin: 4px 0 18px;">
+    To accept this quote, sign and date below and return by email. An invoice will follow with payment details.
+  </p>
+
+  <div class="accept">
+    <div>
+      <div class="sigline"></div>
+      <div class="sigcap">Signed &middot; Alan Dines</div>
+    </div>
+    <div>
+      <div class="sigline"></div>
+      <div class="sigcap">Date</div>
+    </div>
+  </div>
+
+  <div style="font-size:9pt; color:var(--soft); margin-top: 22px; line-height:1.7;">
+    <strong style="color: var(--ink); display:block; margin-bottom: 6px; font-size: 9.5pt;">Optional add-ons &amp; payment method</strong>
+    <span style="display:inline-block; width:14px; height:14px; border:1.5px solid var(--ink); margin-right:8px; vertical-align:middle;"></span>
+    CMS add-on &mdash; <strong>+£195 one-off</strong> &middot; edit the site yourself.<br/>
+    <span style="display:inline-block; width:14px; height:14px; border:1.5px solid var(--orange); margin-right:8px; vertical-align:middle;"></span>
+    Pay via the <strong>Bia Electric Credits</strong> programme &mdash; receive equivalent value back as Bia Credit (beta, no warranty).
+  </div>
+
+  <div class="doc-foot">
+    <div>Bia Electric &middot; tim@bia-electric.com</div>
+    <div>Page 2 of 2 &middot; Quote DI&ndash;2026&ndash;001</div>
+  </div>
+</section>
+
+<script>
+  // Insert today's date in DD MMM YYYY format
+  const d = new Date();
+  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  document.getElementById('dateOut').textContent =
+    String(d.getDate()).padStart(2,'0') + ' ' + months[d.getMonth()] + ' ' + d.getFullYear();
+</script>
+</body>
+</html>
