@@ -34,7 +34,10 @@
     Object.entries(panels).forEach(([k, el]) => {
       el.classList.toggle('hidden', k !== name);
     });
-    $$('.tab-link').forEach(b => b.classList.toggle('is-active', b.dataset.tab === name));
+    $$('.tab-link').forEach(b => {
+      if (b.hasAttribute('data-no-highlight')) return;
+      b.classList.toggle('is-active', b.dataset.tab === name);
+    });
     window.scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' });
     if (push) history.replaceState({}, '', `#${name}`);
     // re-trigger reveals on the now-visible panel

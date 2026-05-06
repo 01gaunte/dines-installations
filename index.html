@@ -66,7 +66,7 @@
      ============================================================ -->
 <header class="fixed top-0 inset-x-0 z-40 backdrop-blur-xl bg-ink-900/60 border-b border-white/5">
   <div class="max-w-7xl mx-auto px-5 lg:px-8 h-20 flex items-center justify-between">
-    <a href="#home" data-tab="home" class="tab-link flex items-center group">
+    <a href="#home" data-tab="home" data-no-highlight class="tab-link flex items-center group">
       <img src="assets/logo.png" alt="Dines Installations" class="h-9 sm:h-10 w-auto transition group-hover:scale-[1.03]" />
     </a>
 
@@ -115,16 +115,8 @@
       <div class="absolute inset-0 bg-gradient-to-t from-ink-900 via-transparent to-transparent"></div>
     </div>
 
-    <!-- floating mouse-parallax shapes -->
-    <div class="absolute inset-0 pointer-events-none -z-10">
-      <div data-mouse="20" class="absolute top-24 left-[8%] h-32 w-32 rounded-2xl bg-brand-500/30 backdrop-blur-md border border-brand-400/40 rotate-12 will-change-transform"></div>
-      <div data-mouse="-30" class="absolute top-[55%] left-[60%] h-20 w-20 rounded-full bg-brand-300/40 blur-xl will-change-transform"></div>
-      <div data-mouse="40" class="absolute bottom-24 right-[10%] h-40 w-40 rounded-full border-2 border-brand-400/40 will-change-transform"></div>
-      <div data-mouse="-15" class="absolute top-[30%] right-[20%] h-16 w-16 rounded-lg bg-brand-500/20 backdrop-blur-md border border-white/10 -rotate-12 will-change-transform"></div>
-    </div>
-
     <div class="relative z-10 max-w-7xl mx-auto px-5 lg:px-8 py-32 grid lg:grid-cols-12 gap-10 items-center w-full">
-      <div class="lg:col-span-7" data-mouse="-10">
+      <div class="lg:col-span-7">
         <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/15 rounded-full px-4 py-1.5 text-xs font-medium tracking-wide text-brand-200 mb-6">
           <span class="h-2 w-2 rounded-full bg-brand-400 animate-pulse"></span>
           MCS-aligned solar PV specialists &middot; Halifax
@@ -167,19 +159,19 @@
         </div>
       </div>
 
-      <!-- floating image stack with mouse-parallax depth (#2) -->
+      <!-- floating image stack with subtle mouse-parallax depth (#2) -->
       <div class="lg:col-span-5 relative h-[460px] hidden lg:block" id="heroStack">
-        <div data-mouse="-25" class="absolute top-0 left-8 w-72 h-96 rounded-3xl overflow-hidden shadow-2xl ring-1 ring-white/10 will-change-transform">
+        <div data-mouse="-8" class="absolute top-0 left-8 w-72 h-96 rounded-3xl overflow-hidden shadow-2xl ring-1 ring-white/10 will-change-transform">
           <img src="https://images.pexels.com/photos/9875411/pexels-photo-9875411.jpeg?auto=compress&cs=tinysrgb&w=900" class="w-full h-full object-cover" alt="Solar panels close up" />
         </div>
-        <div data-mouse="35" class="absolute top-24 right-0 w-64 h-80 rounded-3xl overflow-hidden shadow-2xl ring-1 ring-white/10 will-change-transform">
+        <div data-mouse="12" class="absolute top-24 right-0 w-64 h-80 rounded-3xl overflow-hidden shadow-2xl ring-1 ring-white/10 will-change-transform">
           <img src="https://images.pexels.com/photos/9875448/pexels-photo-9875448.jpeg?auto=compress&cs=tinysrgb&w=800" class="w-full h-full object-cover" alt="Solar installer" />
         </div>
-        <div data-mouse="15" class="absolute bottom-0 left-20 w-56 h-44 rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/10 will-change-transform">
+        <div data-mouse="5" class="absolute bottom-0 left-20 w-56 h-44 rounded-2xl overflow-hidden shadow-xl ring-1 ring-white/10 will-change-transform">
           <img src="https://images.pexels.com/photos/9679179/pexels-photo-9679179.jpeg?auto=compress&cs=tinysrgb&w=700" class="w-full h-full object-cover" alt="Electrician working" />
         </div>
         <!-- floating badge -->
-        <div data-mouse="-50" class="absolute bottom-10 right-4 bg-brand-500 text-ink-900 rounded-2xl px-5 py-4 shadow-glow rotate-3 will-change-transform">
+        <div data-mouse="-18" class="absolute bottom-10 right-4 bg-brand-500 text-ink-900 rounded-2xl px-5 py-4 shadow-glow rotate-3 will-change-transform">
           <div class="text-[10px] uppercase tracking-widest font-bold">Save up to</div>
           <div class="font-display font-bold text-3xl leading-none mt-1">£1,200</div>
           <div class="text-[10px] uppercase tracking-widest font-bold mt-1">per year</div>
