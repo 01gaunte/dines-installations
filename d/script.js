@@ -1,0 +1,90 @@
+/* ============================================================
+   Dines Installations — Design D
+   Minimal: tabs, reveals, counters, form. Gallery scrolls via CSS.
+   ============================================================ */
+
+(() => {
+  const $  = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+
+  $('#year').textContent = new Date().getFullYear();
+
+  const panels = {
+    home:     $('#tab-home'),
+    about:    $('#tab-about'),
+    services: $('#tab-services'),
+    contact:  $('#tab-contact'),
+  };
+
+  const setTab = (name, push = true) => {
+    if (!panels[name]) return;
+    Object.entries(panels).forEach(([k, el]) => el.classList.toggle('hidden', k !== name));
+    $$('.tab-link').forEach(b => {
+      if (b.hasAttribute('data-no-highlight')) return;
+      b.classList.toggle('is-active', b.dataset.tab === name);
+    });
+    window.scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' });
+    if (push) history.replaceState({}, '', `#${name}`);
+    requestAnimationFrame(() => bindReveals(panels[name]));
+    $('#mobileNav').classList.add('hidden');
+  };
+
+  $$('.tab-link').forEach(btn => btn.addEventListener('click', e => {
+    e.preventDefault();
+    setTab(btn.dataset.tab);
+  }));
+
+  $('#navToggle').addEventListener('click', () => $('#mobileNav').classList.toggle('hidden'));
+
+  const initial = (location.hash || '#home').replace('#', '');
+  setTab(panels[initial] ? initial : 'home', false);
+
+  // reveals
+  const revealIO = new IntersectionObserver((entries) => {
+    entries.forEach(en => {
+      if (en.isIntersecting) {
+        en.target.classList.add('in');
+        revealIO.unobserve(en.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -8% 0px' });
+
+  function bindReveals(scope = document) {
+    $$('.reveal', scope).forEach(el => { if (!el.classList.contains('in')) revealIO.observe(el); });
+  }
+  bindReveals();
+
+  // counters
+  const counterIO = new IntersectionObserver((entries) => {
+    entries.forEach(en => {
+      if (!en.isIntersecting) return;
+      const el = en.target;
+      const target = parseFloat(el.dataset.target);
+      const decimals = parseInt(el.dataset.decimals || '0', 10);
+      const dur = 1500;
+      const start = performance.now();
+      const tick = (now) => {
+        const t = Math.min(1, (now - start) / dur);
+        const eased = 1 - Math.pow(1 - t, 3);
+        const v = target * eased;
+        el.textContent = decimals ? v.toFixed(decimals) : Math.floor(v).toLocaleString();
+        if (t < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+      counterIO.unobserve(el);
+    });
+  }, { threshold: 0.4 });
+  $$('.counter').forEach(el => counterIO.observe(el));
+
+  // form
+  const form = $('#contactForm');
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      form.reset();
+      const status = $('#formStatus');
+      status.classList.remove('hidden');
+      setTimeout(() => status.classList.add('hidden'), 5000);
+    });
+  }
+})();
