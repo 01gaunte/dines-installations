@@ -2,7 +2,16 @@
 
 Marketing site for **Dines Installations LTD** — Solar PV, battery storage, EV chargers and electrical work in Halifax & West Yorkshire.
 
-Built as a static single-page site with TailwindCSS (CDN) and a custom rAF-driven parallax engine — 10 distinct parallax techniques across 4 tabs (Home, About, Services, Contact).
+Built as a static single-page site with TailwindCSS (CDN). Four design variants live side-by-side; the root URL serves the selected design.
+
+| Path | Design |
+| --- | --- |
+| `/`   | **Design D — gallery-hero showcase** *(live)* |
+| `/a/` | Design A — dark, parallax-heavy |
+| `/b/` | Design B — light editorial |
+| `/c/` | Design C — dark cinematic single hero |
+
+A small **A / B / C / D** switcher pill in the top-right of every page lets you flip between them.
 
 ## Local preview
 
