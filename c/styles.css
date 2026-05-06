@@ -1,0 +1,81 @@
+/* ============================================================
+   Dines Installations — Design C (cinematic dark)
+   ============================================================ */
+
+html { scroll-behavior: smooth; }
+body { font-feature-settings: "ss01", "cv11"; }
+
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #070a0f; }
+::-webkit-scrollbar-thumb { background: #1f2530; border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: #f5a524; }
+
+::selection { background: #f5a524; color: #070a0f; }
+
+/* tabs */
+.tab-panel { animation: tabIn .55s cubic-bezier(.2,.7,.2,1) both; }
+@keyframes tabIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.tab-link.is-active {
+  color: #f5a524;
+}
+nav .tab-link.is-active {
+  text-shadow: 0 0 24px rgba(245,165,36,0.4);
+}
+
+/* reveal */
+.reveal, [data-reveal] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s cubic-bezier(.2,.7,.2,1), transform 1s cubic-bezier(.2,.7,.2,1);
+  transition-delay: var(--reveal-delay, 0s);
+}
+.reveal.in, [data-reveal].in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* hero headline pre-reveal: clipped */
+[data-reveal].block { will-change: transform, opacity; }
+
+/* counter */
+.counter { font-variant-numeric: tabular-nums; }
+
+/* sun rays — slow rotation */
+#sunRays {
+  animation: spin 90s linear infinite;
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* marquee */
+.marquee {
+  animation: marquee 60s linear infinite;
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* vertical writing helper */
+.writing-vertical {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+/* reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal, [data-reveal], .tab-panel { transition: none !important; animation: none !important; opacity: 1 !important; transform: none !important; }
+  #sunRays, .marquee { animation: none !important; }
+  [data-parallax-y] { transform: none !important; }
+}
+
+/* iOS height */
+@supports (-webkit-touch-callout: none) {
+  .min-h-\[100svh\] { min-height: -webkit-fill-available; }
+}
